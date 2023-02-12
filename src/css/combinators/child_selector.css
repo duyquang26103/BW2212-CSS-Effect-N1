@@ -1,0 +1,4 @@
+/* Child combinator */
+div#container > p {
+    background-color: yellow;
+}

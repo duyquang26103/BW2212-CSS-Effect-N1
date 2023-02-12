@@ -1,0 +1,4 @@
+/* General sibling combinator */
+div#container ~ p {
+    background-color: greenyellow;
+}

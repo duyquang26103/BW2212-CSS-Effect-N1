@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-elements</title>
+    <style>
+        p.line::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+
+        p.letter::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+
+        /* Multiple Pseudo-elements */
+        p.multiple-pseudo::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+        }
+
+        p.multiple-pseudo::first-line {
+        color: #0000ff;
+        font-variant: small-caps;
+        }
+
+        /* ::before Pseudo-element */
+        h1::before {
+            content: url('../images/banner.jpeg');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Pseudo-elements</h1>
+        <div>
+            <p class="line">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+            <p class="line">Phần tử giả ::first-line chỉ có thể được áp dụng cho các phần tử cấp khối (block)</p>
+            <p class="line">
+                font properties
+                color properties
+                background properties
+                word-spacing
+                letter-spacing
+                text-decoration
+                vertical-align
+                text-transform
+                line-height
+                clear
+            </p>
+        </div>
+
+        <div>
+            <p class="letter">Phần tử giả ::first-letter được sử dụng để thêm một kiểu đặc biệt vào chữ cái đầu tiên của văn bản.</p>
+            <p class="letter">Các thuộc tính sau áp dụng cho phần tử ::first-letter:</p>
+            <p class="letter">
+                font properties
+                color properties 
+                background properties
+                margin properties
+                padding properties
+                border properties
+                text-decoration
+                vertical-align (only if “float” is “none”)
+                text-transform
+                line-height
+                float
+                clear
+            </p>
+        </div>
+
+        <div>
+            <p class="multiple-pseudo">
+                Trong ví dụ sau, chữ cái đầu tiên của đoạn văn sẽ có màu đỏ, với kích thước phông chữ lớn xx. Phần còn lại của dòng đầu tiên sẽ có màu xanh lam và có chữ hoa nhỏ. Phần còn lại của đoạn văn sẽ có kích thước và màu phông chữ mặc định
+            </p>
+        </div>
+    </div>
+</body>
+</html>

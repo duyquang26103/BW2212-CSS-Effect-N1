@@ -1,0 +1,4 @@
+/* Descendant combinator */
+div#container p {
+    color: blue;
+}

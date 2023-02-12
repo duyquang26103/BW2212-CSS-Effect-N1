@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+    <style>
+        /* Descendant combinator */
+        div#container p {
+            color: blue;
+        }
+
+        /* Child combinator */
+        div#container > p {
+            background-color: yellow;
+        }
+
+        /* Adjacent sibling combinator */
+        h1 + p {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        /* General sibling combinator */
+        div#container ~ p {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>This is a header in div.</h1>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+
+        <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <span>This is span. Not in a div.</span>
+    <p>Paragraph 6. Not in a div.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+a:hover {
+    color: rgb(245, 3, 3);
+}
+
+a:visited {
+    color: rgb(19, 18, 18);
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+button:active {
+    background-color: rgb(5, 9, 247);
+}
