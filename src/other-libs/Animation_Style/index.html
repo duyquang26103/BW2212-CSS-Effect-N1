@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Style</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+        .my-element {
+            display: inline-block;
+            margin: 0 0.5rem;
+
+            animation: bounce; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 2s; /* don't forget to set a duration! */
+        }
+
+        /* This only changes this particular animation duration */
+        .animate__animated.animate__bounce {
+            --animate-duration: 4s;
+        }
+
+        /* This changes all the animations globally */
+        :root {
+            --animate-duration: 800ms;
+            --animate-delay: 0.9s;
+        }
+    </style>
+</head>
+<body>
+<h1 class="animate__animated animate__tada">An animated element with basic usage</h1>
+<h2 class="animate__animated my-element">An animated element using @keyframe</h2>
+<h3 class="animate__animated animate__bounce">An animated element is customized</h3>
+<h3 class="animate__animated animate__bounce animate__infinite animate__delay-2s">An animated element with Utility class</h3>
+
+<script>
+    // All animations will take half the time to accomplish
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+</script>
+</body>
+</html>
